@@ -103,31 +103,43 @@ function getAutoResponse(message) {
     const lowerMessage = message.toLowerCase();
     
     if (lowerMessage.includes('цена') || lowerMessage.includes('стоимость') || lowerMessage.includes('сколько')) {
-        return 'У нас есть три программы: Базовый курс - 9 900 ₽, Профессиональный - 29 900 ₽, Премиум - 79 900 ₽. Все цены указаны с учётом скидки!';
+        return 'У нас есть 6 программ:\n\n🆓 EvoStart — БЕСПЛАТНО (7 дней)\n💚 EvoBasics «Старт» — 3 490 ₽\n⭐ EvoBasics «С поддержкой» — 5 490 ₽\n🚀 EvoAdvance — 60 000 ₽ (или 12 000 ₽/мес)\n👑 EvoMastery — от 600 000 ₽/год\n🏢 EvoCorporate — от 750 000 ₽/год';
+    }
+    
+    if (lowerMessage.includes('бесплатн') || lowerMessage.includes('evostart')) {
+        return 'EvoStart — это бесплатный 7-дневный практикум! Вы получите 5 вводных уроков и доступ к сообществу. Идеально для старта!';
+    }
+    
+    if (lowerMessage.includes('разниц') || lowerMessage.includes('отличи') || lowerMessage.includes('разница')) {
+        return 'Основные различия:\n\n• EvoBasics «Старт» — только материалы\n• EvoBasics «С поддержкой» — + консультации куратора\n\nВыбор зависит от вашей потребности в поддержке!';
     }
     
     if (lowerMessage.includes('рассрочк') || lowerMessage.includes('платеж')) {
-        return 'Да, доступна рассрочка на 3, 6 или 12 месяцев без процентов. Подробности могу рассказать подробнее!';
+        return 'Рассрочка доступна для EvoAdvance — 12 000 ₽/мес вместо 60 000 ₽ единоразово. Без процентов и переплат!';
     }
     
     if (lowerMessage.includes('возврат') || lowerMessage.includes('вернуть')) {
         return 'Мы предоставляем гарантию возврата денег в течение 14 дней. Просто свяжитесь с нашей поддержкой!';
     }
     
-    if (lowerMessage.includes('сертификат') || lowerMessage.includes('документ')) {
-        return 'После окончания курса вы получите электронный сертификат с уникальным номером, который можно добавить в портфолио или резюме.';
+    if (lowerMessage.includes('корпоратив') || lowerMessage.includes('компан') || lowerMessage.includes('команд')) {
+        return 'EvoCorporate — корпоративная лицензия для компаний от 50 сотрудников. Включает аналитику, персонального менеджера и API. Оставьте заявку для получения КП!';
+    }
+    
+    if (lowerMessage.includes('evomastery') || lowerMessage.includes('мастер') || lowerMessage.includes('персональн')) {
+        return 'EvoMastery — это 12 месяцев персональной работы с методологом, мастермайнд-группы и индивидуальный подход. Максимальный уровень поддержки!';
     }
     
     if (lowerMessage.includes('привет') || lowerMessage.includes('здравствуй') || lowerMessage.includes('добрый')) {
-        return 'Здравствуйте! Рада вас видеть! Чем могу помочь? Могу рассказать о наших программах обучения.';
+        return 'Здравствуйте! 👋 Рада вас видеть! Чем могу помочь? Могу рассказать о наших программах — от бесплатного EvoStart до персонального EvoMastery.';
     }
     
     if (lowerMessage.includes('программ') || lowerMessage.includes('курс') || lowerMessage.includes('обучени')) {
-        return 'У нас есть три программы: Базовый (для начинающих), Профессиональный (для углублённого изучения) и Премиум (с индивидуальным подходом). Какая вас интересует?';
+        return 'У нас 6 программ для разных уровней:\n\n🆓 EvoStart — бесплатный старт\n💚 EvoBasics — база за 21 день\n🚀 EvoAdvance — 6 месяцев с AI\n👑 EvoMastery — персональная работа\n🏢 EvoCorporate — для компаний\n\nКакая вас интересует?';
     }
     
     // Стандартный ответ
-    return 'Спасибо за ваш вопрос! Наш специалист скоро ответит вам подробнее. А пока могу подсказать: вас интересуют программы обучения, цены или условия оплаты?';
+    return 'Спасибо за ваш вопрос! Наш специалист скоро ответит вам подробнее. А пока могу подсказать: вас интересуют программы, цены или условия?';
 }
 
 chatSend.addEventListener('click', sendMessage);
@@ -145,9 +157,12 @@ const programPrice = document.getElementById('programPrice');
 const paymentForm = document.getElementById('paymentForm');
 
 const programNames = {
-    basic: 'Базовый курс',
-    professional: 'Профессиональный курс',
-    premium: 'Премиум курс'
+    evostart: 'EvoStart (7-дневный практикум)',
+    'evobasics-start': 'EvoBasics «Старт»',
+    'evobasics-support': 'EvoBasics «С поддержкой»',
+    evoadvance: 'EvoAdvance (6 месяцев)',
+    evomastery: 'EvoMastery (12 месяцев)',
+    evocorporate: 'EvoCorporate (корпоративный)'
 };
 
 // Открытие модального окна
@@ -195,7 +210,23 @@ paymentForm.addEventListener('submit', (e) => {
         program: programName.textContent,
         price: programPrice.textContent,
         paymentMethod: document.querySelector('input[name="paymentMethod"]:checked').value
-    };
+    });
+    
+    // Проверка на бесплатный курс
+    if (formData.price === 'Бесплатно' || formData.price === '0 ₽') {
+        alert(`🎉 Поздравляем, ${formData.name}!\n\nВы записались на: ${formData.program}\n\nДоступ к материалам отправлен на: ${formData.email}\n\nПроверьте почту в течение 5 минут!`);
+        closeModal();
+        paymentForm.reset();
+        return;
+    }
+    
+    // Для корпоративного и премиум - заявка вместо оплаты
+    if (formData.program.includes('EvoMastery') || formData.program.includes('EvoCorporate')) {
+        alert(`Спасибо, ${formData.name}!\n\nВаша заявка на ${formData.program} принята!\n\nНаш специалист свяжется с вами в течение 30 минут по номеру: ${formData.phone}\n\nДля обсуждения деталей и подготовки индивидуального предложения.`);
+        closeModal();
+        paymentForm.reset();
+        return;
+    }
     
     // Здесь будет интеграция с платёжной системой
     // Пока что просто показываем сообщение

@@ -355,6 +355,36 @@ img {
     opacity: 0.1;
 }
 
+.program-card.free-program {
+    border-color: #10b981;
+    background: linear-gradient(135deg, #f0fdf4 0%, var(--bg-white) 100%);
+}
+
+.program-card.premium-card {
+    border-color: #f59e0b;
+    background: linear-gradient(135deg, #fffbeb 0%, var(--bg-white) 100%);
+}
+
+.program-card.corporate-card {
+    border-color: #6366f1;
+    background: linear-gradient(135deg, #eef2ff 0%, var(--bg-white) 100%);
+}
+
+.program-badge.free {
+    background: #10b981;
+    color: white;
+}
+
+.program-badge.vip {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+}
+
+.program-badge.corporate {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+}
+
 .program-header {
     display: flex;
     justify-content: space-between;
@@ -944,6 +974,24 @@ img {
 @media (max-width: 1024px) {
     .programs-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .program-card.featured {
+        order: -1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .programs-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
     }
     
     .program-card.featured {
