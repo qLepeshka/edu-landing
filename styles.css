@@ -6,16 +6,17 @@
 }
 
 :root {
-    --primary: #6366f1;
-    --primary-hover: #4f46e5;
-    --primary-light: #e0e7ff;
+    --primary: #0abab5;
+    --primary-hover: #099e9a;
+    --primary-light: #d4f5f4;
+    --primary-dark: #087e7a;
     --text-dark: #1e293b;
     --text-medium: #475569;
     --text-light: #94a3b8;
     --bg-white: #ffffff;
-    --bg-light: #f8fafc;
-    --bg-lighter: #f1f5f9;
-    --border: #e2e8f0;
+    --bg-light: #f8fcfc;
+    --bg-lighter: #f0f9f9;
+    --border: #d4efef;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -121,10 +122,18 @@ img {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 24px;
     font-weight: 700;
     color: var(--primary);
     font-family: 'Inter', sans-serif;
+}
+
+.logo img {
+    height: 36px;
+    width: auto;
 }
 
 .nav-links {
@@ -178,7 +187,7 @@ img {
 /* ===== HERO ===== */
 .hero {
     padding: 160px 0 100px;
-    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+    background: linear-gradient(135deg, var(--bg-light) 0%, #e8f8f8 50%, var(--bg-white) 100%);
     text-align: center;
 }
 
@@ -312,7 +321,7 @@ img {
 /* ===== PROGRAMS ===== */
 .programs {
     padding: 100px 0;
-    background: var(--bg-light);
+    background: linear-gradient(180deg, var(--bg-light) 0%, #f0fafa 100%);
 }
 
 .programs-grid {
@@ -357,8 +366,8 @@ img {
 }
 
 .program-card.free-program {
-    border-color: #10b981;
-    background: linear-gradient(135deg, #f0fdf4 0%, var(--bg-white) 100%);
+    border-color: var(--primary);
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-white) 100%);
 }
 
 .program-card.premium-card {
@@ -372,7 +381,7 @@ img {
 }
 
 .program-badge.free {
-    background: #10b981;
+    background: var(--primary);
     color: white;
 }
 
@@ -546,7 +555,7 @@ img {
 /* ===== CONTACT ===== */
 .contact {
     padding: 100px 0;
-    background: var(--bg-light);
+    background: linear-gradient(180deg, #f0fafa 0%, var(--bg-light) 100%);
 }
 
 .contact-content {

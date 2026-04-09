@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (lowerMessage.includes('привет') || lowerMessage.includes('здравствуй') || lowerMessage.includes('добрый')) {
-            return 'Здравствуйте! 👋 Рада вас видеть! Чем могу помочь? Могу рассказать о наших программах — от бесплатного EvoStart до персонального EvoMastery в ЭвоСфера.';
+            return 'Здравствуйте! 👋 Я AI-ассистент ЭвоСфера. Могу рассказать о наших программах — от бесплатного EvoStart до персонального EvoMastery.';
         }
 
         if (lowerMessage.includes('программ') || lowerMessage.includes('курс') || lowerMessage.includes('обучени')) {
@@ -367,6 +367,6 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(statsSection);
     }
 
-    console.log('🚀 Лендинг ЭвоСфера загружен успешно!');
+    console.log('🚀 ЭвоСфера — EdTech экосистема загружена!');
 
 }); // Конец DOMContentLoaded
