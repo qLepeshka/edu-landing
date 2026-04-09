@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение и развитие — Выберите свою программу</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">EduPlatform</a>
+                <ul class="nav-links">
+                    <li><a href="#about">О проекте</a></li>
+                    <li><a href="#programs">Программы</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Инвестируй в своё будущее</h1>
+                <p>Профессиональные программы обучения от экспертов-практиков. Выберите подходящий курс и начните обучение уже сегодня.</p>
+                <a href="#programs" class="btn btn-primary">Выбрать программу</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- О проекте -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">О проекте</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Наша платформа — это современное образовательное пространство, созданное для тех, кто стремится к профессиональному росту и личностному развитию.</p>
+                    <p>Мы сотрудничаем с ведущими специалистами различных отраслей, чтобы предоставить вам доступ к актуальным знаниям и практическим навыкам.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5000+</span>
+                            <span class="stat-label">Выпускников</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Программ</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Довольных студентов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <h3>Практические знания</h3>
+                        <p>Все программы основаны на реальных кейсах и практическом опыте</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <h3>Гибкий график</h3>
+                        <p>Учитесь в удобном для вас темпе в любое время</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <h3>Поддержка экспертов</h3>
+                        <p>Персональные консультации и обратная связь от преподавателей</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <h3>Сертификат</h3>
+                        <p>По окончании выдаётся сертификат подтверждённого образца</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Программы -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <h2 class="section-title">Программы обучения</h2>
+            <p class="section-subtitle">Выберите подходящую программу и начните свой путь к успеху</p>
+            <div class="programs-grid">
+                <!-- Программа 1 -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3>Базовый курс</h3>
+                        <span class="program-badge">Популярное</span>
+                    </div>
+                    <div class="program-body">
+                        <p class="program-description">Идеально для начинающих. Освойте фундаментальные знания и навыки для старта карьеры.</p>
+                        <ul class="program-features">
+                            <li>4 недели обучения</li>
+                            <li>20+ видеоуроков</li>
+                            <li>Практические задания</li>
+                            <li>Доступ к чату</li>
+                            <li>Сертификат</li>
+                        </ul>
+                        <div class="program-price">
+                            <span class="price-current">9 900 ₽</span>
+                            <span class="price-old">14 900 ₽</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline js-buy-program" data-program="basic" data-price="9900">Выбрать</button>
+                </div>
+
+                <!-- Программа 2 -->
+                <div class="program-card featured">
+                    <div class="program-header">
+                        <h3>Профессиональный курс</h3>
+                        <span class="program-badge recommended">Рекомендуем</span>
+                    </div>
+                    <div class="program-body">
+                        <p class="program-description">Углублённая программа для тех, кто хочет стать настоящим профессионалом в своей области.</p>
+                        <ul class="program-features">
+                            <li>12 недель обучения</li>
+                            <li>60+ видеоуроков</li>
+                            <li>Проекты для портфолио</li>
+                            <li>Персональный ментор</li>
+                            <li>Приоритетная поддержка</li>
+                            <li>Сертификат с отличием</li>
+                        </ul>
+                        <div class="program-price">
+                            <span class="price-current">29 900 ₽</span>
+                            <span class="price-old">39 900 ₽</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary js-buy-program" data-program="professional" data-price="29900">Выбрать</button>
+                </div>
+
+                <!-- Программа 3 -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3>Премиум курс</h3>
+                        <span class="program-badge">VIP</span>
+                    </div>
+                    <div class="program-body">
+                        <p class="program-description">Максимальная программа с индивидуальным подходом и эксклюзивными материалами.</p>
+                        <ul class="program-features">
+                            <li>24 недели обучения</li>
+                            <li>120+ видеоуроков</li>
+                            <li>Реальные проекты</li>
+                            <li>Личный наставник</li>
+                            <li>Пожизненный доступ</li>
+                            <li>Трудоустройство</li>
+                            <li>Премиум сертификат</li>
+                        </ul>
+                        <div class="program-price">
+                            <span class="price-current">79 900 ₽</span>
+                            <span class="price-old">99 900 ₽</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline js-buy-program" data-program="premium" data-price="79900">Выбрать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Как проходит обучение?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Обучение проходит на нашей онлайн-платформе. Вы получаете доступ к видеоурокам, практическим заданиям и материалам. Можете учиться в удобном темпе, а преподаватели ответят на все вопросы в чате.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Можно ли вернуть деньги?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, мы предоставляем гарантию возврата денег в течение 14 дней с момента покупки. Если курс вам не подошёл, просто свяжитесь с нашей поддержкой.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Какой документ я получу после обучения?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>После успешного окончания курса вы получите электронный сертификат с уникальным номером, который можно добавить в портфолио или резюме.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Есть ли рассрочка?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, для всех программ доступна рассрочка на 3, 6 или 12 месяцев без процентов. Подробности можно узнать у нашего специалиста в чате.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Остались вопросы?</h2>
+            <p class="section-subtitle">Наш специалист ответит на все ваши вопросы в течение 15 минут</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:info@eduplatform.ru">info@eduplatform.ru</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Телефон</h4>
+                            <a href="tel:+78001234567">8 (800) 123-45-67</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div>
+                            <h4>Чат на сайте</h4>
+                            <p>Нажмите на иконку чата в правом нижнем углу</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2026 EduPlatform. Все права защищены.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Оферта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Виджет чата -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-toggle" id="chatToggle" aria-label="Открыть чат">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <h4>Онлайн-консультант</h4>
+                    <span class="chat-status">
+                        <span class="status-dot"></span>
+                        Онлайн
+                    </span>
+                </div>
+                <button class="chat-close" id="chatClose" aria-label="Закрыть чат">×</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>Здравствуйте! 👋</p>
+                        <p>Я специалист EduPlatform. Чем могу помочь?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" class="chat-input" placeholder="Введите сообщение..." maxlength="500">
+                <button class="chat-send" id="chatSend" aria-label="Отправить">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно оплаты -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Закрыть">×</button>
+            <div class="modal-header">
+                <h3>Оплата программы</h3>
+            </div>
+            <div class="modal-body">
+                <div class="selected-program" id="selectedProgram">
+                    <h4 id="programName"></h4>
+                    <p class="program-price-display" id="programPrice"></p>
+                </div>
+                <form class="payment-form" id="paymentForm">
+                    <div class="form-group">
+                        <label for="userName">Ваше имя</label>
+                        <input type="text" id="userName" required placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">Email</label>
+                        <input type="email" id="userEmail" required placeholder="example@mail.ru">
+                    </div>
+                    <div class="form-group">
+                        <label for="userPhone">Телефон</label>
+                        <input type="tel" id="userPhone" required placeholder="+7 (999) 999-99-99">
+                    </div>
+                    <div class="form-group">
+                        <label>Способ оплаты</label>
+                        <div class="payment-methods">
+                            <label class="payment-method">
+                                <input type="radio" name="paymentMethod" value="card" checked>
+                                <span>💳 Банковская карта</span>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="paymentMethod" value="sbp">
+                                <span>📱 СБП</span>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="paymentMethod" value="installment">
+                                <span>📋 Рассрочка</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Перейти к оплате</button>
+                </form>
+                <p class="payment-note">После оплаты вы получите доступ к материалам на email</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
