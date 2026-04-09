@@ -124,16 +124,18 @@ img {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 24px;
+    gap: 12px;
+    font-size: 26px;
     font-weight: 700;
     color: var(--primary);
     font-family: 'Inter', sans-serif;
 }
 
 .logo img {
-    height: 36px;
-    width: auto;
+    height: 48px;
+    width: 48px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .nav-links {
