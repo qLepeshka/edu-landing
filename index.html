@@ -100,151 +100,162 @@
         <div class="container">
             <h2 class="section-title">Программы обучения</h2>
             <p class="section-subtitle">Выберите подходящий уровень и начните свой путь к успеху</p>
-            <div class="programs-grid">
-                <!-- Программа 1: EvoStart -->
-                <div class="program-card free-program">
-                    <div class="program-header">
-                        <h3>EvoStart</h3>
-                        <span class="program-badge free">Бесплатно</span>
-                    </div>
-                    <div class="program-body">
-                        <p class="program-description">7-дневный бесплатный практикум. Идеально для знакомства с платформой и определения вашего пути.</p>
-                        <ul class="program-features">
-                            <li>7 дней доступа</li>
-                            <li>5 вводных уроков</li>
-                            <li>Доступ к сообществу</li>
-                            <li>Базовые материалы</li>
-                            <li>Вводная консультация</li>
-                        </ul>
-                        <div class="program-price">
-                            <span class="price-current">Бесплатно</span>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn carousel-btn-prev" id="carouselPrev" aria-label="Предыдущая">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <div class="carousel-viewport" id="carouselViewport">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Программа 1: EvoStart -->
+                        <div class="program-card free-program">
+                            <div class="program-header">
+                                <h3>EvoStart</h3>
+                                <span class="program-badge free">Бесплатно</span>
+                            </div>
+                            <div class="program-body">
+                                <p class="program-description">7-дневный бесплатный практикум. Идеально для знакомства с платформой и определения вашего пути.</p>
+                                <ul class="program-features">
+                                    <li>7 дней доступа</li>
+                                    <li>5 вводных уроков</li>
+                                    <li>Доступ к сообществу</li>
+                                    <li>Базовые материалы</li>
+                                    <li>Вводная консультация</li>
+                                </ul>
+                                <div class="program-price">
+                                    <span class="price-current">Бесплатно</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline js-buy-program" data-program="evostart" data-price="0">Начать бесплатно</button>
                         </div>
-                    </div>
-                    <button class="btn btn-outline js-buy-program" data-program="evostart" data-price="0">Начать бесплатно</button>
-                </div>
 
-                <!-- Программа 2: EvoBasics Старт -->
-                <div class="program-card">
-                    <div class="program-header">
-                        <h3>EvoBasics «Старт»</h3>
-                        <span class="program-badge">21 день</span>
-                    </div>
-                    <div class="program-body">
-                        <p class="program-description">Базовый курс для тех, кто хочет получить фундаментальные знания за 21 день.</p>
-                        <ul class="program-features">
-                            <li>21 день обучения</li>
-                            <li>15+ видеоуроков</li>
-                            <li>Практические задания</li>
-                            <li>Доступ к чату</li>
-                            <li>Сертификат</li>
-                        </ul>
-                        <div class="program-price">
-                            <span class="price-current">3 490 ₽</span>
+                        <!-- Программа 2: EvoBasics Старт -->
+                        <div class="program-card">
+                            <div class="program-header">
+                                <h3>EvoBasics «Старт»</h3>
+                                <span class="program-badge">21 день</span>
+                            </div>
+                            <div class="program-body">
+                                <p class="program-description">Базовый курс для тех, кто хочет получить фундаментальные знания за 21 день.</p>
+                                <ul class="program-features">
+                                    <li>21 день обучения</li>
+                                    <li>15+ видеоуроков</li>
+                                    <li>Практические задания</li>
+                                    <li>Доступ к чату</li>
+                                    <li>Сертификат</li>
+                                </ul>
+                                <div class="program-price">
+                                    <span class="price-current">3 490 ₽</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline js-buy-program" data-program="evobasics-start" data-price="3490">Выбрать</button>
                         </div>
-                    </div>
-                    <button class="btn btn-outline js-buy-program" data-program="evobasics-start" data-price="3490">Выбрать</button>
-                </div>
 
-                <!-- Программа 3: EvoBasics С поддержкой -->
-                <div class="program-card featured">
-                    <div class="program-header">
-                        <h3>EvoBasics «С поддержкой»</h3>
-                        <span class="program-badge recommended">Рекомендуем</span>
-                    </div>
-                    <div class="program-body">
-                        <p class="program-description">21 день обучения с персональной поддержкой куратора. Оптимальный баланс цены и качества.</p>
-                        <ul class="program-features">
-                            <li>21 день обучения</li>
-                            <li>15+ видеоуроков</li>
-                            <li>Практические задания</li>
-                            <li>Личные консультации куратора</li>
-                            <li>Приоритетная поддержка</li>
-                            <li>Сертификат</li>
-                        </ul>
-                        <div class="program-price">
-                            <span class="price-current">5 490 ₽</span>
+                        <!-- Программа 3: EvoBasics С поддержкой -->
+                        <div class="program-card featured">
+                            <div class="program-header">
+                                <h3>EvoBasics «С поддержкой»</h3>
+                                <span class="program-badge recommended">Рекомендуем</span>
+                            </div>
+                            <div class="program-body">
+                                <p class="program-description">21 день обучения с персональной поддержкой куратора. Оптимальный баланс цены и качества.</p>
+                                <ul class="program-features">
+                                    <li>21 день обучения</li>
+                                    <li>15+ видеоуроков</li>
+                                    <li>Практические задания</li>
+                                    <li>Личные консультации куратора</li>
+                                    <li>Приоритетная поддержка</li>
+                                    <li>Сертификат</li>
+                                </ul>
+                                <div class="program-price">
+                                    <span class="price-current">5 490 ₽</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary js-buy-program" data-program="evobasics-support" data-price="5490">Выбрать</button>
                         </div>
-                    </div>
-                    <button class="btn btn-primary js-buy-program" data-program="evobasics-support" data-price="5490">Выбрать</button>
-                </div>
 
-                <!-- Программа 4: EvoAdvance -->
-                <div class="program-card">
-                    <div class="program-header">
-                        <h3>EvoAdvance</h3>
-                        <span class="program-badge">6 месяцев</span>
-                    </div>
-                    <div class="program-body">
-                        <p class="program-description">Полная программа с поддержкой AI и сообщества. Для тех, кто настроен на серьёзный результат.</p>
-                        <ul class="program-features">
-                            <li>6 месяцев обучения</li>
-                            <li>50+ видеоуроков</li>
-                            <li>Проекты для портфолио</li>
-                            <li>Поддержка AI-ассистента</li>
-                            <li>Закрытое сообщество</li>
-                            <li>Персональный ментор</li>
-                            <li>Расширенный сертификат</li>
-                        </ul>
-                        <div class="program-price">
-                            <span class="price-current">60 000 ₽</span>
-                            <span class="price-old">или 12 000 ₽/мес</span>
+                        <!-- Программа 4: EvoAdvance -->
+                        <div class="program-card">
+                            <div class="program-header">
+                                <h3>EvoAdvance</h3>
+                                <span class="program-badge">6 месяцев</span>
+                            </div>
+                            <div class="program-body">
+                                <p class="program-description">Полная программа с поддержкой AI и сообщества. Для тех, кто настроен на серьёзный результат.</p>
+                                <ul class="program-features">
+                                    <li>6 месяцев обучения</li>
+                                    <li>50+ видеоуроков</li>
+                                    <li>Проекты для портфолио</li>
+                                    <li>Поддержка AI-ассистента</li>
+                                    <li>Закрытое сообщество</li>
+                                    <li>Персональный ментор</li>
+                                    <li>Расширенный сертификат</li>
+                                </ul>
+                                <div class="program-price">
+                                    <span class="price-current">60 000 ₽</span>
+                                    <span class="price-old">или 12 000 ₽/мес</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline js-buy-program" data-program="evoadvance" data-price="60000">Выбрать</button>
                         </div>
-                    </div>
-                    <button class="btn btn-outline js-buy-program" data-program="evoadvance" data-price="60000">Выбрать</button>
-                </div>
 
-                <!-- Программа 5: EvoMastery -->
-                <div class="program-card premium-card">
-                    <div class="program-header">
-                        <h3>EvoMastery</h3>
-                        <span class="program-badge vip">VIP</span>
-                    </div>
-                    <div class="program-body">
-                        <p class="program-description">12 месяцев персональной работы с методологом и мастермайнд. Максимальный уровень поддержки.</p>
-                        <ul class="program-features">
-                            <li>12 месяцев обучения</li>
-                            <li>Персональный методолог</li>
-                            <li>Мастермайнд-группы</li>
-                            <li>Индивидуальная программа</li>
-                            <li>Пожизненный доступ</li>
-                            <li>Приоритетная поддержка 24/7</li>
-                            <li>Премиум сертификат</li>
-                            <li>Помощь в трудоустройстве</li>
-                        </ul>
-                        <div class="program-price">
-                            <span class="price-current">от 600 000 ₽</span>
-                            <span class="price-period">в год</span>
+                        <!-- Программа 5: EvoMastery -->
+                        <div class="program-card premium-card">
+                            <div class="program-header">
+                                <h3>EvoMastery</h3>
+                                <span class="program-badge vip">VIP</span>
+                            </div>
+                            <div class="program-body">
+                                <p class="program-description">12 месяцев персональной работы с методологом и мастермайнд. Максимальный уровень поддержки.</p>
+                                <ul class="program-features">
+                                    <li>12 месяцев обучения</li>
+                                    <li>Персональный методолог</li>
+                                    <li>Мастермайнд-группы</li>
+                                    <li>Индивидуальная программа</li>
+                                    <li>Пожизненный доступ</li>
+                                    <li>Приоритетная поддержка 24/7</li>
+                                    <li>Премиум сертификат</li>
+                                    <li>Помощь в трудоустройстве</li>
+                                </ul>
+                                <div class="program-price">
+                                    <span class="price-current">от 600 000 ₽</span>
+                                    <span class="price-period">в год</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline js-buy-program" data-program="evomastery" data-price="600000">Оставить заявку</button>
                         </div>
-                    </div>
-                    <button class="btn btn-outline js-buy-program" data-program="evomastery" data-price="600000">Оставить заявку</button>
-                </div>
 
-                <!-- Программа 6: EvoCorporate -->
-                <div class="program-card corporate-card">
-                    <div class="program-header">
-                        <h3>EvoCorporate</h3>
-                        <span class="program-badge corporate">Корпоративный</span>
-                    </div>
-                    <div class="program-body">
-                        <p class="program-description">Корпоративная лицензия для компаний от 50 сотрудников. Обучение команды под ключ.</p>
-                        <ul class="program-features">
-                            <li>Лицензия на компанию</li>
-                            <li>От 50 сотрудников</li>
-                            <li>Корпоративная программа</li>
-                            <li>Аналитика прогресса</li>
-                            <li>Персональный менеджер</li>
-                            <li>API интеграция</li>
-                            <li>Отчёты для руководства</li>
-                            <li>Гибкие условия</li>
-                        </ul>
-                        <div class="program-price">
-                            <span class="price-current">от 750 000 ₽</span>
-                            <span class="price-period">в год</span>
+                        <!-- Программа 6: EvoCorporate -->
+                        <div class="program-card corporate-card">
+                            <div class="program-header">
+                                <h3>EvoCorporate</h3>
+                                <span class="program-badge corporate">Корпоративный</span>
+                            </div>
+                            <div class="program-body">
+                                <p class="program-description">Корпоративная лицензия для компаний от 50 сотрудников. Обучение команды под ключ.</p>
+                                <ul class="program-features">
+                                    <li>Лицензия на компанию</li>
+                                    <li>От 50 сотрудников</li>
+                                    <li>Корпоративная программа</li>
+                                    <li>Аналитика прогресса</li>
+                                    <li>Персональный менеджер</li>
+                                    <li>API интеграция</li>
+                                    <li>Отчёты для руководства</li>
+                                    <li>Гибкие условия</li>
+                                </ul>
+                                <div class="program-price">
+                                    <span class="price-current">от 750 000 ₽</span>
+                                    <span class="price-period">в год</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline js-buy-program" data-program="evocorporate" data-price="750000">Запросить КП</button>
                         </div>
                     </div>
-                    <button class="btn btn-outline js-buy-program" data-program="evocorporate" data-price="750000">Запросить КП</button>
                 </div>
+                <button class="carousel-btn carousel-btn-next" id="carouselNext" aria-label="Следующая">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
             </div>
+            <div class="carousel-dots" id="carouselDots"></div>
         </div>
     </section>
 

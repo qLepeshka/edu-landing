@@ -369,4 +369,119 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('🚀 ЭвоСфера — EdTech экосистема загружена!');
 
+    // ===== КАРУСЕЛЬ ПРОГРАММ =====
+    const carouselTrack = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    const dotsContainer = document.getElementById('carouselDots');
+
+    if (carouselTrack && prevBtn && nextBtn) {
+        const cards = carouselTrack.querySelectorAll('.program-card');
+        const totalCards = cards.length;
+        let currentIndex = 0;
+        let cardsPerView = 3;
+
+        function getCardsPerView() {
+            if (window.innerWidth <= 768) return 1;
+            if (window.innerWidth <= 1024) return 2;
+            return 3;
+        }
+
+        function getMaxIndex() {
+            return Math.max(0, totalCards - cardsPerView);
+        }
+
+        function createDots() {
+            dotsContainer.innerHTML = '';
+            const dotCount = Math.max(1, totalCards - cardsPerView + 1);
+            for (let i = 0; i < dotCount; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'carousel-dot' + (i === currentIndex ? ' active' : '');
+                dot.setAttribute('aria-label', 'Слайд ' + (i + 1));
+                dot.addEventListener('click', function() {
+                    currentIndex = i;
+                    updateCarousel();
+                });
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function updateCarousel() {
+            const cardWidth = cards[0].offsetWidth;
+            const gap = 24;
+            const offset = currentIndex * (cardWidth + gap);
+            carouselTrack.style.transform = 'translateX(-' + offset + 'px)';
+
+            // Обновить точки
+            const dots = dotsContainer.querySelectorAll('.carousel-dot');
+            dots.forEach(function(dot, i) {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+
+            // Обновить кнопки
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex >= getMaxIndex();
+        }
+
+        function updateCardsPerView() {
+            const newCardsPerView = getCardsPerView();
+            if (newCardsPerView !== cardsPerView) {
+                cardsPerView = newCardsPerView;
+                if (currentIndex > getMaxIndex()) {
+                    currentIndex = getMaxIndex();
+                }
+                createDots();
+                updateCarousel();
+            }
+        }
+
+        // Начальная инициализация
+        cardsPerView = getCardsPerView();
+        createDots();
+        updateCarousel();
+
+        // Кнопки
+        prevBtn.addEventListener('click', function() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        nextBtn.addEventListener('click', function() {
+            if (currentIndex < getMaxIndex()) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        // Свайп на мобильных
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselTrack.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        carouselTrack.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0 && currentIndex < getMaxIndex()) {
+                    currentIndex++;
+                    updateCarousel();
+                } else if (diff < 0 && currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            }
+        }, { passive: true });
+
+        // Пересчёт при ресайзе
+        window.addEventListener('resize', function() {
+            updateCardsPerView();
+            updateCarousel();
+        });
+    }
+
 }); // Конец DOMContentLoaded
