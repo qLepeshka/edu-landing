@@ -26,6 +26,31 @@
     --transition: all 0.3s ease;
 }
 
+/* Фиксируем светлую тему — отключаем авто-тёмную тему браузера */
+html {
+    color-scheme: light only;
+}
+
+@media (prefers-color-scheme: dark) {
+    body,
+    .navbar,
+    .hero,
+    .about,
+    .programs,
+    .faq,
+    .contact,
+    .footer,
+    .program-card,
+    .feature,
+    .chat-window,
+    .modal-content,
+    .contact-item,
+    .hero-content {
+        background: inherit !important;
+        color: inherit !important;
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -1164,6 +1189,55 @@ img {
         min-width: 260px;
     }
 
+    /* Компактные карточки на мобильных */
+    .program-card {
+        padding: 20px;
+    }
+
+    .program-card .program-header {
+        margin-bottom: 12px;
+    }
+
+    .program-card .program-header h3 {
+        font-size: 18px;
+    }
+
+    .program-card .program-description {
+        font-size: 14px;
+        margin-bottom: 14px;
+        line-height: 1.5;
+    }
+
+    .program-card .program-features li {
+        padding: 6px 0 6px 22px;
+        font-size: 14px;
+    }
+
+    .program-card .program-features {
+        margin-bottom: 16px;
+    }
+
+    .program-card .program-price {
+        padding-top: 14px;
+    }
+
+    .program-card .price-current {
+        font-size: 24px;
+    }
+
+    .program-card .price-old {
+        font-size: 14px;
+    }
+
+    .program-card .price-period {
+        font-size: 14px;
+    }
+
+    .program-card .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
     .carousel-btn {
         width: 40px;
         height: 40px;
@@ -1261,10 +1335,23 @@ img {
     }
 
     .program-card {
-        padding: 24px;
+        padding: 16px;
+    }
+
+    .program-card .program-header h3 {
+        font-size: 16px;
+    }
+
+    .program-card .program-description {
+        font-size: 13px;
+    }
+
+    .program-card .program-features li {
+        font-size: 13px;
+        padding: 5px 0 5px 20px;
     }
 
     .price-current {
-        font-size: 28px;
+        font-size: 22px;
     }
 }
