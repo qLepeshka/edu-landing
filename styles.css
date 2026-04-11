@@ -29,29 +29,6 @@
 /* Фиксируем светлую тему — отключаем авто-тёмную тему браузера */
 html {
     color-scheme: light only;
-}
-
-@media (prefers-color-scheme: dark) {
-    body,
-    .navbar,
-    .hero,
-    .about,
-    .programs,
-    .faq,
-    .contact,
-    .footer,
-    .program-card,
-    .feature,
-    .chat-window,
-    .modal-content,
-    .contact-item,
-    .hero-content {
-        background: inherit !important;
-        color: inherit !important;
-    }
-}
-
-html {
     scroll-behavior: smooth;
 }
 
